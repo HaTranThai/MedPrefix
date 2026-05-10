@@ -1,0 +1,58 @@
+# Default Med-Prefix configuration (matches paper, HAM10000 setup).
+# All values can be overridden by CLI flags to scripts/train.py.
+
+# --- Data ---
+dataset: ham10000
+image_dirs:
+  - data/HAM10000/HAM10000_images_part_1
+  - data/HAM10000/HAM10000_images_part_2
+instructions_json: data/instructions/ham10000_instructions_clean.json
+output_dir: results/ham10000_full
+
+# --- LLM ---
+llm_profile: qwen0p5b           # qwen0p5b | qwen1p5b | tinyllama
+
+# --- Vision / Tabular ---
+vision_name: vit_base_patch16_224
+tabular_mode: BASELINE          # BASELINE | MLP | FT_TRANSFORMER | TEXT
+img_size: 224
+n_tab_prefix: 2                 # paper: 2 for HAM10000, 6 for ISIC 2019
+n_img_prefix: 14
+perceiver_depth: 2
+perceiver_heads: 8
+
+# --- GXCA ---
+use_gxca: true
+gxca_layers: 4
+gxca_heads: null
+
+# --- Auxiliary reconstruction loss ---
+# 0.0 = OFF (HAM10000 default).
+# 0.2 = ON (recommended for ISIC 2019 — forces tabular prefix to encode
+#           age/sex/localization via small reconstruction heads).
+aux_lambda: 0.0
+lr_tab_multiplier: 1.0   # set to 1.5 for ISIC 2019
+
+# --- Training schedule ---
+batch_size: 8
+max_len: 192
+epochs_phase1: 2                # tabular-only warm-up
+epochs_phase2: 6                # full tri-modal
+lr_tab: 2.0e-4
+lr_full: 2.0e-4
+weight_decay: 1.0e-2
+warmup_ratio: 0.1
+max_grad_norm: 1.0
+grad_accum: 2
+
+# --- Ablation / dropout ---
+ablation_mode: FULL             # FULL | NO_TAB | NO_IMG
+use_modality_dropout: true
+p_img_drop: 0.15
+p_tab_drop: 0.30
+
+# --- Misc ---
+seed: 42
+num_workers: 4
+device: "cuda:0"
+early_stop_patience: 3
