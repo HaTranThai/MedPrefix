@@ -29,10 +29,10 @@ Four Kaggle datasets are needed (all free, no Kaggle Pro required):
 
 | # | Purpose | Kaggle URL |
 |---|---|---|
-| 1 | HAM10000 images | <https://www.nature.com/articles/sdata2018161> |
-| 2 | ISIC 2019 images (224×224 resized) | <https://arxiv.org/abs/1902.03368> |
-| 3 | HAM10000 instruction–response JSON | <https://www.kaggle.com/datasets/mrworldzero/ham10000-instruction> |
-| 4 | ISIC 2019 instruction–response JSON | <https://www.kaggle.com/datasets/tranhathai/isic-tmp> |
+| 1 | HAM10000 images | <[HAM1000](https://www.nature.com/articles/sdata2018161)> |
+| 2 | ISIC 2019 images (224×224 resized) | <[ISIC2019](https://arxiv.org/abs/1902.03368)> |
+| 3 | HAM10000 instruction–response JSON | <[HAM10000-Instruction](https://huggingface.co/datasets/HaTranThai/HAM10000-Instruction)> |
+| 4 | ISIC 2019 instruction–response JSON | <[ISIC2019-Instructions](https://huggingface.co/datasets/HaTranThai/ISIC2019-Instructions)> |
 
 ---
 
