@@ -14,9 +14,6 @@ cd medprefix
 python -m venv .venv && source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
-
-# NLTK data needed by METEOR
-python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4'); nltk.download('punkt')"
 ```
 
 Tested with Python 3.10–3.12, PyTorch 2.x, CUDA 12.x, NVIDIA RTX 3090 / A100 (≥ 16 GB VRAM).
