@@ -29,10 +29,10 @@ Four Kaggle datasets are needed (all free, no Kaggle Pro required):
 
 | # | Purpose | Kaggle URL |
 |---|---|---|
-| 1 | HAM10000 images | <[HAM1000](https://www.nature.com/articles/sdata2018161)> |
-| 2 | ISIC 2019 images (224×224 resized) | <[ISIC2019](https://arxiv.org/abs/1902.03368)> |
-| 3 | HAM10000 instruction–response JSON | <[HAM10000-Instruction](https://huggingface.co/datasets/HaTranThai/HAM10000-Instruction)> |
-| 4 | ISIC 2019 instruction–response JSON | <[ISIC2019-Instructions](https://huggingface.co/datasets/HaTranThai/ISIC2019-Instructions)> |
+| 1 | HAM10000 images | [HAM1000](https://www.nature.com/articles/sdata2018161) |
+| 2 | ISIC 2019 images (224×224 resized) | [ISIC2019](https://arxiv.org/abs/1902.03368) |
+| 3 | HAM10000 instruction–response JSON | [HAM10000-Instruction](https://huggingface.co/datasets/HaTranThai/HAM10000-Instruction) |
+| 4 | ISIC 2019 instruction–response JSON | [ISIC2019-Instructions](https://huggingface.co/datasets/HaTranThai/ISIC2019-Instructions) |
 
 ---
 
@@ -44,7 +44,7 @@ Four Kaggle datasets are needed (all free, no Kaggle Pro required):
 python scripts/train.py \
     --dataset ham10000 \
     --image_dirs data/HAM10000/HAM10000_images_part_1 data/HAM10000/HAM10000_images_part_2 \
-    --instructions_json data/instructions/ham10000_instructions_clean.json \
+    --instructions_json data/instructions/ham10000_instructions.json \
     --output_dir results/ham10000_full \
     --llm_profile qwen0p5b \
     --batch_size 8 --epochs_phase1 2 --epochs_phase2 6 \
@@ -98,7 +98,7 @@ All other hyperparameters (LR, weight decay, dropout, GXCA layers, …) are expo
 python scripts/evaluate.py \
     --dataset ham10000 \
     --image_dirs data/HAM10000/HAM10000_images_part_1 data/HAM10000/HAM10000_images_part_2 \
-    --instructions_json data/instructions/ham10000_instructions_clean.json \
+    --instructions_json data/instructions/ham10000_instructions.json \
     --checkpoint results/ham10000_full/checkpoint/ckpt_best_full.pt \
     --output_dir results/ham10000_full/eval \
     --llm_profile qwen0p5b \
