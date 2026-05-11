@@ -29,8 +29,8 @@ Four Kaggle datasets are needed (all free, no Kaggle Pro required):
 
 | # | Purpose | Kaggle URL |
 |---|---|---|
-| 1 | HAM10000 images | <[https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000](https://www.nature.com/articles/sdata2018161)> |
-| 2 | ISIC 2019 images (224×224 resized) | <[https://www.kaggle.com/datasets/nischaydnk/isic-2019-jpg-224x224-resized](https://arxiv.org/abs/1902.03368)> |
+| 1 | HAM10000 images | <https://www.nature.com/articles/sdata2018161> |
+| 2 | ISIC 2019 images (224×224 resized) | <https://arxiv.org/abs/1902.03368> |
 | 3 | HAM10000 instruction–response JSON | <https://www.kaggle.com/datasets/mrworldzero/ham10000-instruction> |
 | 4 | ISIC 2019 instruction–response JSON | <https://www.kaggle.com/datasets/tranhathai/isic-tmp> |
 
