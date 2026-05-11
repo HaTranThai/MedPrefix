@@ -24,10 +24,10 @@ Tested with Python 3.10–3.12, PyTorch 2.x, CUDA 12.x, NVIDIA RTX 3090 / A100 (
 
 Four Kaggle datasets are needed (all free, no Kaggle Pro required):
 
-| # | Purpose | Kaggle URL |
+| # | Purpose | URL |
 |---|---|---|
 | 1 | HAM10000 images | [HAM1000](https://www.nature.com/articles/sdata2018161) |
-| 2 | ISIC 2019 images (224×224 resized) | [ISIC2019](https://arxiv.org/abs/1902.03368) |
+| 2 | ISIC 2019 images | [ISIC2019](https://challenge.isic-archive.com/landing/2019/) |
 | 3 | HAM10000 instruction–response JSON | [HAM10000-Instruction](https://huggingface.co/datasets/HaTranThai/HAM10000-Instruction) |
 | 4 | ISIC 2019 instruction–response JSON | [ISIC2019-Instructions](https://huggingface.co/datasets/HaTranThai/ISIC2019-Instructions) |
 
