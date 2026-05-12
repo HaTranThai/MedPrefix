@@ -21,9 +21,6 @@ Tested with Python 3.10–3.12, PyTorch 2.x, CUDA 12.x, NVIDIA RTX 3090 / A100 (
 ---
 
 ## 2. Data preparation
-
-Four Kaggle datasets are needed (all free, no Kaggle Pro required):
-
 | # | Purpose | URL |
 |---|---|---|
 | 1 | HAM10000 images | [HAM1000](https://www.nature.com/articles/sdata2018161) |
