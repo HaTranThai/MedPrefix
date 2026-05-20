@@ -151,10 +151,10 @@ If you use this code, please cite:
 
 ```
 @article{medprefix2026,
-  title  = {Med-Prefix: Tri-Modal Prefix Conditioning for Instruction-Following
-            Dermatology Report Generation},
-  author = {Tran Thai Ha and Bui Thanh Hung},
-  year   = {2026}
+  title   = {Med-Prefix: Tri-Modal Prefix Conditioning for Instruction-Following Dermatology Report Generation},
+  author  = {Tran Thai Ha and Bui Thanh Hung},
+  journal = {The Visual Computer},
+  year    = {2026}
 }
 ```
 
