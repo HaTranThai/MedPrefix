@@ -16,7 +16,7 @@ llm_profile: qwen0p5b           # qwen0p5b | qwen1p5b | tinyllama
 vision_name: vit_base_patch16_224
 tabular_mode: BASELINE          # BASELINE | MLP | FT_TRANSFORMER | TEXT
 img_size: 224
-n_tab_prefix: 2                 # paper: 2 for HAM10000, 6 for ISIC 2019
+n_tab_prefix: 2                 # paper: 2 for both HAM10000 and ISIC 2019
 n_img_prefix: 14
 perceiver_depth: 2
 perceiver_heads: 8
@@ -26,12 +26,13 @@ use_gxca: true
 gxca_layers: 4
 gxca_heads: null
 
-# --- Auxiliary reconstruction loss ---
-# 0.0 = OFF (HAM10000 default).
-# 0.2 = ON (recommended for ISIC 2019 — forces tabular prefix to encode
-#           age/sex/localization via small reconstruction heads).
+# --- Auxiliary reconstruction loss (optional, OFF in the paper) ---
+# 0.0 = OFF (default, used in the paper for both HAM10000 and ISIC 2019).
+# > 0  = ON  (experimental: forces the tabular prefix to encode age/sex/
+#             localization via small reconstruction heads). Not used in
+#             the reported results.
 aux_lambda: 0.0
-lr_tab_multiplier: 1.0   # set to 1.5 for ISIC 2019
+lr_tab_multiplier: 1.0   # paper uses 1.0 for both datasets
 
 # --- Training schedule ---
 batch_size: 8

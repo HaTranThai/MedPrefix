@@ -46,7 +46,7 @@ python scripts/train.py \
     --ablation_mode FULL
 ```
 
-### ISIC 2019 (uses auxiliary reconstruction loss + 1.5× tab LR per the paper)
+### ISIC 2019
 
 ```bash
 python scripts/train.py \
@@ -56,10 +56,8 @@ python scripts/train.py \
     --output_dir results/isic2019_full \
     --llm_profile qwen0p5b \
     --batch_size 8 --epochs_phase1 2 --epochs_phase2 6 \
-    --n_tab_prefix 6 --n_img_prefix 14 \
-    --ablation_mode FULL \
-    --aux_lambda 0.2 \
-    --lr_tab_multiplier 1.5
+    --n_tab_prefix 2 --n_img_prefix 14 \
+    --ablation_mode FULL
 ```
 
 > **Note:** The Kaggle archive `nischaydnk/isic-2019-jpg-224x224-resized`

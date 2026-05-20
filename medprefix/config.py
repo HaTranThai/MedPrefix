@@ -22,7 +22,7 @@ class TrainConfig:
     vision_name: str = "vit_base_patch16_224"
     tabular_mode: str = "BASELINE"     # BASELINE | MLP | FT_TRANSFORMER | TEXT
     img_size: int = 224
-    n_tab_prefix: int = 2              # paper: 2 for HAM10000, 6 for ISIC 2019
+    n_tab_prefix: int = 2              # paper: 2 for both HAM10000 and ISIC 2019
     n_img_prefix: int = 14
     perceiver_depth: int = 2
     perceiver_heads: int = 8
@@ -32,9 +32,9 @@ class TrainConfig:
     gxca_layers: int = 4
     gxca_heads: Optional[int] = None
 
-    # Auxiliary reconstruction loss (recommended ON for ISIC 2019, OFF for HAM)
+    # Auxiliary reconstruction loss (optional; OFF in the paper for both datasets)
     aux_lambda: float = 0.0
-    lr_tab_multiplier: float = 1.0     # multiply base LR for tabular-side params
+    lr_tab_multiplier: float = 1.0     # multiply base LR for tabular-side params; paper uses 1.0
 
     # Training schedule
     batch_size: int = 8
