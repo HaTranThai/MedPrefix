@@ -71,8 +71,9 @@ def add_train_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--image_dirs", nargs="+", required=True,
                         help="One or more directories containing the dermoscopic JPGs.")
     parser.add_argument("--instructions_json", required=True,
-                        help="Path to the instruction-response JSON produced by "
-                             "scripts/generate_instructions.py")
+                        help="Path to the instruction-response JSON (download from the "
+                             "HuggingFace datasets HaTranThai/HAM10000-Instruction or "
+                             "HaTranThai/ISIC2019-Instructions).")
     parser.add_argument("--output_dir", default="results/run")
 
     # LLM
