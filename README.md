@@ -2,7 +2,12 @@
 
 **Tri-Modal Prefix Conditioning for Instruction-Following Dermatology Report Generation**
 
-Official implementation of the Med-Prefix paper. The model conditions a frozen LLM (Qwen) on three modalities — dermoscopic images, structured patient metadata (age, sex, anatomical site), and a natural-language instruction — through a compact learnable prefix produced by a Dual Perceiver Resampler, plus Gated Cross-Attention adapters injected into the last decoder blocks.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20302132.svg)](https://doi.org/10.5281/zenodo.20302132)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Official implementation of the Med-Prefix paper (*The Visual Computer*, 2026). The model conditions a frozen LLM (Qwen) on three modalities — dermoscopic images, structured patient metadata (age, sex, anatomical site), and a natural-language instruction — through a compact learnable prefix produced by a Dual Perceiver Resampler, plus Gated Cross-Attention adapters injected into the last decoder blocks.
+
+A persistent, citable snapshot of this source tree is archived on Zenodo: [https://doi.org/10.5281/zenodo.20302132](https://doi.org/10.5281/zenodo.20302132) (concept DOI — always resolves to the latest release).
 
 ---
 
@@ -27,6 +32,12 @@ Tested with Python 3.10–3.12, PyTorch 2.x, CUDA 12.x, NVIDIA RTX 3090 / A100 (
 | 2 | ISIC 2019 images | [ISIC2019](https://challenge.isic-archive.com/landing/2019/) |
 | 3 | HAM10000 instruction–response JSON | [HAM10000-Instruction](https://huggingface.co/datasets/HaTranThai/HAM10000-Instruction) |
 | 4 | ISIC 2019 instruction–response JSON | [ISIC2019-Instructions](https://huggingface.co/datasets/HaTranThai/ISIC2019-Instructions) |
+
+> **Note on the instruction-response corpora.** Rows 3 and 4 above are the
+> canonical instruction-response datasets used to train and evaluate
+> Med-Prefix in the paper. Download them directly from HuggingFace — these
+> released JSONs are the exact files used for the experiments reported in
+> the paper, so no extra preprocessing or LLM call is required on your end.
 
 ---
 
@@ -135,7 +146,6 @@ medprefix/
 ├── scripts/
 │   ├── train.py               # main training entry (argparse)
 │   ├── evaluate.py            # eval entry (argparse)
-│   ├── generate_instructions.py   # build instruction–response JSON via teacher LLM
 │   └── prepare_isic2019.py    # convert ISIC metadata → HAM-style schema
 ├── configs/default.yaml       # optional YAML config (overridden by CLI)
 ├── requirements.txt
@@ -147,14 +157,27 @@ medprefix/
 
 ## 6. Citation
 
-If you use this code, please cite:
+If you use this code, please cite the paper:
 
-```
+```bibtex
 @article{medprefix2026,
   title   = {Med-Prefix: Tri-Modal Prefix Conditioning for Instruction-Following Dermatology Report Generation},
   author  = {Tran Thai Ha and Bui Thanh Hung},
   journal = {The Visual Computer},
   year    = {2026}
+}
+```
+
+If you use the released source code or the archived snapshot, please also cite the Zenodo record:
+
+```bibtex
+@software{medprefix_code_2026,
+  author    = {Tran Thai Ha and Bui Thanh Hung},
+  title     = {Med-Prefix: Tri-Modal Prefix Conditioning for Instruction-Following Dermatology Report Generation (Source Code)},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.20302132},
+  url       = {https://doi.org/10.5281/zenodo.20302132}
 }
 ```
 
