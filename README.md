@@ -2,19 +2,19 @@
 
 **Tri-Modal Prefix Conditioning for Instruction-Following Dermatology Report Generation**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20324404.svg)](https://doi.org/10.5281/zenodo.20324404)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20337665.svg)](https://doi.org/10.5281/zenodo.20337665)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Official implementation of the Med-Prefix paper (*The Visual Computer*, 2026). The model conditions a frozen LLM (Qwen) on three modalities — dermoscopic images, structured patient metadata (age, sex, anatomical site), and a natural-language instruction — through a compact learnable prefix produced by a Dual Perceiver Resampler, plus Gated Cross-Attention adapters injected into the last decoder blocks.
 
-A persistent, citable snapshot of this source tree is archived on Zenodo: [https://doi.org/10.5281/zenodo.20324404](https://doi.org/10.5281/zenodo.20324404) (concept DOI — always resolves to the latest release).
+A persistent, citable snapshot of this source tree is archived on Zenodo: [https://doi.org/10.5281/zenodo.20337665](https://doi.org/10.5281/zenodo.20337665) (concept DOI — always resolves to the latest release).
 
 ---
 
 ## 1. Setup
 
 ```bash
-git clone https://github.com/HaTranThai/Med-Prefix.git medprefix
+git clone https://github.com/HaTranThai/MedPrefix.git medprefix
 cd medprefix
 python -m venv .venv && source .venv/bin/activate
 pip install --upgrade pip
@@ -176,8 +176,8 @@ If you use the released source code or the archived snapshot, please also cite t
   title     = {Med-Prefix: Tri-Modal Prefix Conditioning for Instruction-Following Dermatology Report Generation (Source Code)},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.20324404},
-  url       = {https://doi.org/10.5281/zenodo.20324404}
+  doi       = {10.5281/zenodo.20337665},
+  url       = {https://doi.org/10.5281/zenodo.20337665}
 }
 ```
 
