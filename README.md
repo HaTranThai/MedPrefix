@@ -157,19 +157,6 @@ medprefix/
 
 ## 6. Citation
 
-If you use this code, please cite the paper:
-
-```bibtex
-@article{medprefix2026,
-  title   = {Med-Prefix: Tri-Modal Prefix Conditioning for Instruction-Following Dermatology Report Generation},
-  author  = {Tran Thai Ha and Bui Thanh Hung},
-  journal = {The Visual Computer},
-  year    = {2026}
-}
-```
-
-If you use the released source code or the archived snapshot, please also cite the Zenodo record:
-
 ```bibtex
 @software{medprefix_code_2026,
   author    = {Tran Thai Ha and Bui Thanh Hung},
